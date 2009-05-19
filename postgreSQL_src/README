@@ -1,0 +1,21 @@
+#===============================================================================
+#
+#         FILE:  README
+#
+#        USAGE:   
+#
+#  DESCRIPTION:  
+#
+#      OPTIONS:  ---
+# REQUIREMENTS:  ---
+#         BUGS:  ---
+#        NOTES:  ---
+#       AUTHOR:  khandielas <free.his.cn@gmail.com>
+#      COMPANY:  
+#      VERSION:  1.0
+#      CREATED:  05/18/2009 07:45:34 PM CDT
+#     REVISION:  ---
+#===============================================================================
+
+1. All files to create tables in postgreSQL database are listed under postgreSQL_src directory.
+2. Details/comments about the table is listed in this README file.
