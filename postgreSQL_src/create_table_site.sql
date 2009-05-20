@@ -1,8 +1,8 @@
 --===============================================================================
 --
---          FILE:  create_site_hospital.sql
+--          FILE:  create_table_site.sql
 --
---         USAGE: psql -U username -W password -f create_site_hospital.sql 
+--         USAGE: psql -U username -W password -f create_table_site.sql 
 --   DESCRIPTION:  
 --     site table holds detailed information about this site. For a single site 
 --     medical organization, the name in site probably is the same as the name
