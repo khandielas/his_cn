@@ -8,6 +8,7 @@
 --     Detailed information about the hospital is stored in the site table
 --     id: zip code + \d\d\d , this way each hospital is granted a unique ID. 
 --     version: software version in this hospital with the format of MMM:mmm (MMM is for major, mmm minor)
+--     patch is in the format of yyyymm[a-z].
 --     How large the possibility is that more than 1000 hospital exist in an area with the same zip code?
 --     CREATE TABLE hospital (id char(9) NOT NULL, name varchar(30) NOT NULL, address text, zip_code char(6), phone varchar(15), fax varchar(15));
 --     INSERT INTO hospital VALUES ('100084001', '三好医院', '解放路 5号, 夹皮沟村, 兴安乡', '100084', '05558886688', '(0555)888-6666', '000:001');
