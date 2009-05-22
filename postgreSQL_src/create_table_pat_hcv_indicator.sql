@@ -1,0 +1,26 @@
+--===============================================================================
+--
+--          FILE:  create_table_pat_hcv_indicator.sql
+--
+--         USAGE: psql -U username -W password -f create_table_pat_hcv_indicator.sql 
+--   DESCRIPTION:  
+--     pat_hcv_indicator table holds HCV type (code and type), serves constriant to 
+--     pat_stable(hcv_type).
+--     Reference: 患者 HCV Type 血型, H-0100051 DBSS1.0
+--     
+
+--      OPTIONS:  ---
+-- REQUIREMENTS:  ---
+--         BUGS:  ---
+--        NOTES:  ---
+--       AUTHOR:  Khandielas (Mr), <free.his.cn@gmail.com>
+--      COMPANY:  Free His CN Inc.
+--      VERSION:  1.0
+--      CREATED:  05/20/2009 12:39:20 PM CDT
+--     REVISION:  ---
+--===============================================================================
+
+CREATE TABLE pat_hcv_indicator (code smallint, type varchar);
+INSERT  INTO pat_hcv_indicator VALUES ( 0, '未查');
+INSERT  INTO pat_hcv_indicator VALUES ( 1, '阴性');
+INSERT  INTO pat_hcv_indicator VALUES ( 2, '阳性');

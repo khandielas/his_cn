@@ -27,5 +27,6 @@
 CREATE TABLE sex_code (code smallint, sex varchar(15));
 INSERT INTO sex_code VALUES (0, '未知性别');
 INSERT INTO sex_code VALUES (1, '男');
+INSERT INTO sex_code VALUES (2, '女');
 INSERT INTO sex_code VALUES (9, '未说明的性别');
 

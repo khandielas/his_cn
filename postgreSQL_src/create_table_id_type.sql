@@ -7,9 +7,9 @@
 --     id_type table holds various identification type as well as its description.
 --     Reference: H-0000005 DBSS1.0
 --     
---     CREATE TABLE id_type (type smallint, id_name varchar(30), description text);
---     INSERT INTO id_type VALUES (1, '身份证', '中华人民共和国公民身份证');
---     INSERT INTO id_type VALUES (2, '护照', '中华人民共和国公民护照');
+--     CREATE TABLE pat_id_type (type smallint, id_name varchar(30), description text);
+--     INSERT INTO pat_id_type VALUES (1, '身份证', '中华人民共和国公民身份证');
+--     INSERT INTO pat_id_type VALUES (2, '护照', '中华人民共和国公民护照');
 
 --      OPTIONS:  ---
 -- REQUIREMENTS:  ---
@@ -22,6 +22,6 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE id_type (type smallint, id_name varchar(30), description text);
+CREATE TABLE pat_id_type (type smallint, id_name varchar(30), description text);
 
 

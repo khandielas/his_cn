@@ -5,14 +5,11 @@
 --         USAGE: psql -U username -W password -f create_table_pat_stable.sql 
 --   DESCRIPTION:  
 --     pat_stable table holds unchanged information of a patient, such as a unique
---     file_no, sex, date of birth, place of birth, personal ID (id_type)
---     medical organization, the name in site probably is the same as the name
---     in hospital table.
+--     file_no, sex, date of birth, place of birth, personal ID (id_type), blood
+--     type, ethnic, etc ......
 --     
 --     There should be more fields added later to site table.
 
---     CREATE TABLE pat_stable (file_no serial, id varchar(30), id_type smallint, sex smallint, dob timestamp, birth_place varchar(50));
---     INSERT INTO pat_stable(id, id_type, sex, dob, birth_place) VALUES ('888888888888', 1, 1, '1975-02-28', '夹皮沟综合 医院');
 --     select * from pat_stable;
 --     file_no |      id      | id_type | sex |         dob         |   birth_place   
 --     ---------+--------------+---------+-----+---------------------+-----------------
@@ -30,6 +27,24 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE pat_stable (file_no serial, id varchar(30), id_type smallint, sex smallint, dob timestamp, birth_place varchar(50));
+CREATE TABLE pat_stable ( file_no serial, 
+	                  id varchar, 
+			  id_type smallint, 
+			  sex smallint, 
+			  dob timestamp, 
+			  birth_place varchar,
+			  native varchar,
+			  nationality varchar,
+			  ethnic varchar,
+			  lang varchar,
+			  abo_blood_type varchar,
+			  rh_blood_type varchar,
+			  user_added smallint,
+			  date_added timestamp,
+			  user_modified smallint,
+			  date_modified timestamp,
+			  national_medical_no varchar
+			  -- Place holder, in case a national medical is available.
+		         );
 
 
