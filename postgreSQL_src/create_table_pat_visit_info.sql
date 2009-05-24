@@ -20,6 +20,7 @@
 
 CREATE TABLE pat_clinical_info( site smallint NOT NULL, 
 	                        kindex char(14) NOT NULL,
+				deposit_balance varchar,
 				age smallint,
 				ageunit varchar,
 				height varchar,
