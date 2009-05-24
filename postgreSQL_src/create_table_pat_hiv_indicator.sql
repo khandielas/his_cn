@@ -4,11 +4,9 @@
 --
 --         USAGE: psql -U username -W password -f create_table_pat_hiv_indicator.sql 
 --   DESCRIPTION:  
---     pat_hcv_indicator table holds HIV status (code and type), serves constriant to 
---     pat_stable(hiv).
+--     pat_hiv_indicator table holds HIV status (code and type), serves as constriant 
 --     Reference: 患者 HIV status, H-0100052 DBSS1.0
 --     
-
 --      OPTIONS:  ---
 -- REQUIREMENTS:  ---
 --         BUGS:  ---
@@ -20,14 +18,13 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE pat_hiv_indicator (code smallint, type varchar);
+CREATE TABLE pat_hiv_indicator (code smallint NOT NULL, type varchar NOT NULL);
 INSERT INTO pat_hiv_indicator VALUES (0, '未查');
 INSERT INTO pat_hiv_indicator VALUES (1, '阴性');
 INSERT INTO pat_hiv_indicator VALUES (2, '阳性');
-select * from pat_hcv_indicator;
+-- select * from pat_hcv_indicator;
 --   code | type 
 --  ------+------
 --      0 | 未查
 --      1 | 阴性
 --      2 | 阳性
---  (3 rows)

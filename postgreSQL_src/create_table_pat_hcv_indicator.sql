@@ -4,11 +4,9 @@
 --
 --         USAGE: psql -U username -W password -f create_table_pat_hcv_indicator.sql 
 --   DESCRIPTION:  
---     pat_hcv_indicator table holds HCV type (code and type), serves constriant to 
---     pat_stable(hcv_type).
+--     pat_hcv_indicator table holds HCV type (code and type), serves as constriant 
 --     Reference: 患者 HCV Type 血型, H-0100051 DBSS1.0
 --     
-
 --      OPTIONS:  ---
 -- REQUIREMENTS:  ---
 --         BUGS:  ---
@@ -20,7 +18,7 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE pat_hcv_indicator (code smallint, type varchar);
+CREATE TABLE pat_hcv_indicator (code smallint NOT NULL, type varchar NOT NULL);
 INSERT  INTO pat_hcv_indicator VALUES ( 0, '未查');
 INSERT  INTO pat_hcv_indicator VALUES ( 1, '阴性');
 INSERT  INTO pat_hcv_indicator VALUES ( 2, '阳性');

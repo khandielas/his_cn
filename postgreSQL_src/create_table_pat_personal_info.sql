@@ -2,9 +2,9 @@
 --
 --          FILE:  create_table_patient_personal_info.sql
 --
---         USAGE: psql -U username -W password -f create_table_outpatient.sql 
+--         USAGE: psql -U username -W password -f create_table_pat_personal_info.sql 
 --   DESCRIPTION:  
---     outpatient table holds non-clinical information about the patient
+--     pat_personal_info table holds non-clinical information about the patient
 --     Reference: 
 --     
 --      OPTIONS:  ---
@@ -47,5 +47,5 @@ CREATE TABLE pat_personal_info( seq serial,
 				account_status boolean,
 				other_contract_no varchar,
 				other_contract_notes text,
-		                primary key (site, kindex) );
-
+		                primary key (site, kindex) 
+			      );

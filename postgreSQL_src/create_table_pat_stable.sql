@@ -29,22 +29,22 @@
 
 CREATE TABLE pat_stable ( file_no serial, 
 	                  id varchar, 
-			  id_type smallint, 
-			  sex smallint, 
+			  id_type varchar, 
+			  sex varchar, 
 			  dob timestamp, 
 			  birth_place varchar,
 			  native varchar,
 			  nationality varchar,
 			  ethnic varchar,
 			  lang varchar,
-			  abo_blood_type varchar,
-			  rh_blood_type varchar,
+			  abo_type varchar,
+			  rh_type varchar,
 			  user_added smallint,
 			  date_added timestamp,
 			  user_modified smallint,
 			  date_modified timestamp,
 			  national_medical_no varchar
 			  -- Place holder, in case a national medical is available.
-		         );
+		        );
 
 

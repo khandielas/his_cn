@@ -1,11 +1,11 @@
 --===============================================================================
 --
---          FILE:  create_table_pat_abo_type.sql
+--          FILE:  create_table_abo_blood_type.sql
 --
---         USAGE: psql -U username -W password -f create_table_pat_abo_type.sql 
+--         USAGE: psql -U username -W password -f create_table_abo_blood_type.sql 
 --   DESCRIPTION:  
---     id_type table holds ABO blood type (code and type), serves constriant to 
---     pat_stable(abo_type).
+--     abo_blood_type table holds ABO blood type (code and type), serves 
+--     constriant to pat_stable(abo_type).
 --     Reference: 患者 ABO 血型, H-0000029 DBSS1.0
 --     
 
@@ -20,13 +20,13 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE pat_abo_type (code smallint, type varchar);
-INSERT INTO  pat_abo_type VALUES( 1, 'A');
-INSERT INTO  pat_abo_type VALUES( 2, 'B');
-INSERT INTO  pat_abo_type VALUES( 3, 'O');
-INSERT INTO  pat_abo_type VALUES( 4, 'AB');
-INSERT INTO  pat_abo_type VALUES( 9, '不详');
--- select * from pat_abo_type;
+CREATE TABLE abo_blood_type (code smallint, type varchar);
+INSERT INTO  abo_blood_type VALUES( 1, 'A');
+INSERT INTO  abo_blood_type VALUES( 2, 'B');
+INSERT INTO  abo_blood_type VALUES( 3, 'O');
+INSERT INTO  abo_blood_type VALUES( 4, 'AB');
+INSERT INTO  abo_blood_type VALUES( 9, '不详');
+-- select * from abo_blood_type;
 -- code | type 
 -- ------+------
 --    1 | A

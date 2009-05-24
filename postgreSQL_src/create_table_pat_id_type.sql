@@ -1,10 +1,10 @@
 --===============================================================================
 --
---          FILE:  create_table_id_type.sql
+--          FILE:  create_table_pat_id_type.sql
 --
---         USAGE: psql -U username -W password -f create_table_id_type.sql 
+--         USAGE: psql -U username -W password -f create_table_pat_id_type.sql 
 --   DESCRIPTION:  
---     id_type table holds various identification type as well as its description.
+--     pat_id_type table holds various identification type as well as its description.
 --     Reference: H-0000005 DBSS1.0
 --     
 --     CREATE TABLE pat_id_type (type smallint, id_name varchar(30), description text);
@@ -22,6 +22,7 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE pat_id_type (type smallint, id_name varchar(30), description text);
-
-
+CREATE TABLE pat_id_type ( type smallint NOT NULL, 
+	                   id_name varchar NOT NULL, 
+			   description varchar
+		         );

@@ -1,14 +1,12 @@
 --===============================================================================
 --
---          FILE:  create_table_pat_rh_blood_type.sql
+--          FILE:  create_table_rh_blood_type.sql
 --
---         USAGE: psql -U username -W password -f create_table_pat_rh_blood_type.sql 
+--         USAGE: psql -U username -W password -f create_table_rh_blood_type.sql 
 --   DESCRIPTION:  
---     id_type table holds RH blood type (code and type), serves constriant to 
---     pat_stable(rh_type).
+--     rh_blood_type table holds RH blood type (code and type), serves as constriant 
 --     Reference: 患者 RH 血型, H-0000030 DBSS1.0
 --     
-
 --      OPTIONS:  ---
 -- REQUIREMENTS:  ---
 --         BUGS:  ---
@@ -20,14 +18,13 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE pat_rh_blood_type(code smallint, type varchar);
-INSERT INTO pat_rh_blood_type VALUES (1, 'RH 阳性');
-INSERT INTO pat_rh_blood_type VALUES (2, 'RH 阴性');
-INSERT INTO pat_rh_blood_type VALUES (9, 'RH 血型不详');
-select * from pat_rh_blood_type;
+CREATE TABLE rh_blood_type(code smallint NOT NULL , type varchar NOT NULL);
+INSERT INTO rh_blood_type VALUES (1, 'RH 阳性');
+INSERT INTO rh_blood_type VALUES (2, 'RH 阴性');
+INSERT INTO rh_blood_type VALUES (9, 'RH 血型不详');
+select * from rh_blood_type;
 --   code |    type     
 --  ------+-------------
 --      1 | RH 阳性
 --      2 | RH 阴性
 --      9 | RH 血型不详
-

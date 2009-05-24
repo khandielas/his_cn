@@ -7,7 +7,7 @@
 --     Hospital table holds information about the hospital || hospital group || medical organization ...
 --     Detailed information about the hospital is stored in the site table
 --     id: zip code + \d\d\d , this way each hospital is granted a unique ID. 
---     version: software version in this hospital with the format of MMM:mmm (MMM is for major, mmm minor)
+--     version: software version in this hospital with the format of MMMM:mm (MMMM is for major, mm for minor)
 --     patch is in the format of yyyymm[a-z].
 --     How large the possibility is that more than 1000 hospital exist in an area with the same zip code?
 --     CREATE TABLE hospital (id char(9) NOT NULL, name varchar(30) NOT NULL, address text, zip_code char(6), phone varchar(15), fax varchar(15));
@@ -29,6 +29,12 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE hospital (id char(9) NOT NULL, name varchar(30) NOT NULL, address text, zip_code char(6), phone varchar(15), fax varchar(15), version varchar(10), patch char(7));
-
-
+CREATE TABLE hospital ( id char(9) NOT NULL, 
+	                name varchar NOT NULL, 
+			address varchar, 
+			zip_code varchar, 
+			phone varchar, 
+			fax varchar, 
+			version varchar, 
+			patch char(7)
+		      );

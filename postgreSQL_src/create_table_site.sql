@@ -31,6 +31,15 @@
 --     REVISION:  ---
 --===============================================================================
 
-CREATE TABLE site (id smallint NOT NULL, name varchar(50) NOT NULL, status boolean, address text, phone varchar(15), fax varchar(15), email varchar(50), creation_date timestamp, creator_id smallint, modification_date timestamp, modifier_id smallint); 
-
-
+CREATE TABLE site ( id smallint NOT NULL, 
+	            name varchar NOT NULL, 
+		    status boolean, 
+		    address varchar, 
+		    phone varchar, 
+		    fax varchar, 
+		    email varchar, 
+		    creation_date timestamp, 
+		    creator_id smallint, 
+		    modification_date timestamp, 
+		    modifier_id smallint
+	          ); 
