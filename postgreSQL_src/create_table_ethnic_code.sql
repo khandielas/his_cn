@@ -1,21 +1,21 @@
 --===============================================================================
 --
---          FILE:  create_table_ethnic_code.sql
+--         FILE:  create_table_ethnic_code.sql
 --
---         USAGE: psql -U username -W password -f create_table_ethnic_code.sql 
---   DESCRIPTION:  
---     ethnic_code table holds all ethnic codes 
---     Reference: H-0000010 DBSS1.0, GB/T 3304-1991 中国各民族名称的罗马字母拼写法和代码
+--        USAGE: psql -U username -W password -f create_table_ethnic_code.sql 
+--  DESCRIPTION:  
+--    ethnic_code table holds all ethnic codes 
+--    Reference: H-0000010 DBSS1.0, GB/T 3304-1991 中国各民族名称的罗马字母拼写法和代码
 --     
---      OPTIONS:  ---
--- REQUIREMENTS:  ---
---         BUGS:  ---
---        NOTES:  ---
+--      OPTIONS:  
+-- REQUIREMENTS:  
+--         BUGS:  
+--        NOTES:  
 --       AUTHOR:  Khandielas (Mr), <free.his.cn@gmail.com>
---      COMPANY:  Free His CN Inc.
+--      COMPANY:  Open Source HIS CN Org.
 --      VERSION:  1.0
 --      CREATED:  05/20/2009 12:39:20 PM CDT
---     REVISION:  ---
+--     REVISION:  
 --===============================================================================
 
 

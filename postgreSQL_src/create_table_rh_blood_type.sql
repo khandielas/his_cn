@@ -1,21 +1,21 @@
 --===============================================================================
 --
---          FILE:  create_table_rh_blood_type.sql
+--         FILE:  create_table_rh_blood_type.sql
 --
---         USAGE: psql -U username -W password -f create_table_rh_blood_type.sql 
---   DESCRIPTION:  
---     rh_blood_type table holds RH blood type (code and type), serves as constriant 
---     Reference: 患者 RH 血型, H-0000030 DBSS1.0
+--        USAGE: psql -U username -W password -f create_table_rh_blood_type.sql 
+--  DESCRIPTION:  
+--    rh_blood_type table holds RH blood type (code and type), serves as constriant 
+--    Reference: 患者 RH 血型, H-0000030 DBSS1.0
 --     
---      OPTIONS:  ---
--- REQUIREMENTS:  ---
---         BUGS:  ---
---        NOTES:  ---
+--      OPTIONS: 
+-- REQUIREMENTS: 
+--         BUGS: 
+--        NOTES: 
 --       AUTHOR:  Khandielas (Mr), <free.his.cn@gmail.com>
---      COMPANY:  Free His CN Inc.
+--      COMPANY:  Open Source HIS CN Org.
 --      VERSION:  1.0
 --      CREATED:  05/20/2009 12:39:20 PM CDT
---     REVISION:  ---
+--     REVISION:  
 --===============================================================================
 
 CREATE TABLE rh_blood_type(code smallint NOT NULL , type varchar NOT NULL);

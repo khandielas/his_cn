@@ -1,22 +1,22 @@
 --===============================================================================
 --
---          FILE:  create_table_country_code.sql
+--         FILE:  create_table_country_code.sql
 --
---         USAGE: psql -U username -W password -f create_table_country_code.sql 
---   DESCRIPTION:  
---     country_code table holds all country codes 
---     Reference: H-0000009 DBSS1.0, 列表编号: GB/T 2659-2000 世界各国和地区名称代码
+--        USAGE: psql -U username -W password -f create_table_country_code.sql 
+--  DESCRIPTION:  
+--    country_code table holds all country codes 
+--    Reference: H-0000009 DBSS1.0, 列表编号: GB/T 2659-2000 世界各国和地区名称代码
 --     iso-3166 http://zh.wikipedia.org/w/index.php?title=ISO_3166-1&variant=zh-cn
 --     
---      OPTIONS:  ---
--- REQUIREMENTS:  ---
---         BUGS:  ---
---        NOTES:  ---
+--      OPTIONS: 
+-- REQUIREMENTS:  
+--         BUGS:  
+--        NOTES:  
 --       AUTHOR:  Khandielas (Mr), <free.his.cn@gmail.com>
---      COMPANY:  Free His CN Inc.
+--      COMPANY:  Open Source HIS CN Org.
 --      VERSION:  1.0
 --      CREATED:  05/20/2009 12:39:20 PM CDT
---     REVISION:  ---
+--     REVISION: 
 --===============================================================================
 
 CREATE TABLE country_code ( code varchar NOT NULL, 

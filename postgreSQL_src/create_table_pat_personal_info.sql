@@ -1,21 +1,21 @@
 --===============================================================================
 --
---          FILE:  create_table_patient_personal_info.sql
+--         FILE:  create_table_patient_personal_info.sql
 --
---         USAGE: psql -U username -W password -f create_table_pat_personal_info.sql 
---   DESCRIPTION:  
---     pat_personal_info table holds non-clinical information about the patient
---     Reference: 
+--        USAGE: psql -U username -W password -f create_table_pat_personal_info.sql 
+--  DESCRIPTION:  
+--    pat_personal_info table holds non-clinical information about the patient
+--    Reference: 
 --     
---      OPTIONS:  ---
--- REQUIREMENTS:  ---
---         BUGS:  ---
---        NOTES:  ---
+--      OPTIONS:  
+-- REQUIREMENTS:  
+--         BUGS:  
+--        NOTES:  
 --       AUTHOR:  Khandielas (Mr), <free.his.cn@gmail.com>
---      COMPANY:  Free His CN Inc.
+--      COMPANY:  Open Source HIS CN Org.
 --      VERSION:  1.0
 --      CREATED:  05/20/2009 12:39:20 PM CDT
---     REVISION:  ---
+--     REVISION:  
 --===============================================================================
 
 CREATE TABLE pat_personal_info( seq serial,

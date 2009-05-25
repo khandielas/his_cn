@@ -1,21 +1,21 @@
 --===============================================================================
 --
---          FILE:  create_table_pat_visit_info.sql
+--         FILE:  create_table_pat_visit_info.sql
 --
---         USAGE: psql -U username -W password -f create_table_pat_visit_info.sql 
---   DESCRIPTION:  
+--        USAGE: psql -U username -W password -f create_table_pat_visit_info.sql 
+--  DESCRIPTION:  
 --     pat_visit_info table holds some information about this visit
---     Reference: 
+--    Reference: 
 --     
---      OPTIONS:  ---
--- REQUIREMENTS:  ---
---         BUGS:  ---
---        NOTES:  ---
+--      OPTIONS: 
+-- REQUIREMENTS: 
+--         BUGS: 
+--        NOTES: 
 --       AUTHOR:  Khandielas (Mr), <free.his.cn@gmail.com>
---      COMPANY:  Free His CN Inc.
+--      COMPANY:  Open Source HIS CN Org. 
 --      VERSION:  1.0
 --      CREATED:  05/23/2009 07:39:20 PM CDT
---     REVISION:  ---
+--     REVISION:
 --===============================================================================
 
 CREATE TABLE pat_clinical_info( site smallint NOT NULL, 

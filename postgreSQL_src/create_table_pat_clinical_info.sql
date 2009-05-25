@@ -1,21 +1,21 @@
 --===============================================================================
 --
---          FILE:  create_table_pat_clinical_info.sql
+--         FILE:  create_table_pat_clinical_info.sql
 --
---         USAGE: psql -U username -W password -f create_table_pat_clinical_info.sql 
---   DESCRIPTION:  
---     pat_clinical_info table holds non-clinical information about the patient
---     Reference: 
+--        USAGE: psql -U username -W password -f create_table_pat_clinical_info.sql 
+--  DESCRIPTION:  
+--    pat_clinical_info table holds non-clinical information about the patient
+--    Reference: 
 --     
---      OPTIONS:  ---
--- REQUIREMENTS:  ---
---         BUGS:  ---
---        NOTES:  ---
+--      OPTIONS:  
+-- REQUIREMENTS:  
+--         BUGS:  
+--        NOTES:  
 --       AUTHOR:  Khandielas (Mr), <free.his.cn@gmail.com>
---      COMPANY:  Free His CN Inc.
+--      COMPANY:  Open Source HIS CN Org.
 --      VERSION:  1.0
 --      CREATED:  05/23/2009 07:39:20 PM CDT
---     REVISION:  ---
+--     REVISION:  
 --===============================================================================
 
 CREATE TABLE pat_clinical_info( site smallint NOT NULL, 
@@ -40,7 +40,6 @@ CREATE TABLE pat_clinical_info( site smallint NOT NULL,
 				allergy boolean,
 				medication boolean,
 				prescription boolean,
-				lab boolean,
-				rad boolean,
+				order boolean, -- Lab, EKG, Rad, etc, separated by '||||', defined in order_type table
 				clinical_service boolean
 			      );
