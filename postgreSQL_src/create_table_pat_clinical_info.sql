@@ -41,5 +41,6 @@ CREATE TABLE pat_clinical_info( site smallint NOT NULL,
 				medication boolean,
 				prescription boolean,
 				order boolean, -- Lab, EKG, Rad, etc, separated by '||||', defined in order_type table
-				clinical_service boolean
+				clinical_service boolean,
+				PRIMARY KEY (site, kindex)
 			      );

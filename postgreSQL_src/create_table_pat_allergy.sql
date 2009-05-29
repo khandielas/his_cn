@@ -18,18 +18,19 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE pat_allergy ( site smallint NOT NULL, 
-	                   kindex char(14) NOT NULL,
-			   id serial,
-			   status boolean,
-			   class smallint,
-			   category smallint,
-			   drug varchar, -- points to drug ID in database
-			   description varchar,
-			   usr_added smallint,
-			   data_added timestamp,
-			   usr_modified smallint,
-			   data_modified timestamp,
-			   notes text, -- multiple notes separated by '||||'
-			   is_component_flag boolean
-		         );
+CREATE TABLE pat_allergy 
+( site              smallint NOT NULL REFERENCES site (id), 
+  kindex            char(14) NOT NULL REFERENCES pat_personal_info (kindex),
+  id                serial   PRIMARY KEY,
+  status            boolean,
+  class             smallint,
+  category          smallint,
+  drug              varchar, -- points to drug ID in database
+  description       varchar,
+  usr_added         smallint,
+  data_added        timestamp,
+  usr_modified      smallint,
+  data_modified     timestamp,
+  notes             text, -- multiple notes separated by '||||'
+  is_component_flag boolean
+);

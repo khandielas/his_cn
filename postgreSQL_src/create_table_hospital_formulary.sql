@@ -19,7 +19,7 @@
 --     REVISION: 
 --===============================================================================
 
-CREATE TABLE hospital_formulary ( hospital_drug_id varchar NOT NULL,
+CREATE TABLE hospital_formulary ( hospital_drug_id varchar PRIMARY KEY,
 	                          national_drug_id varchar,
 	                          drug_name varchar NOT NULL,
 				  english_name varchar,
@@ -36,7 +36,7 @@ CREATE TABLE hospital_formulary ( hospital_drug_id varchar NOT NULL,
 				  site varchar, -- 2||||3||||4 ...
 				  inpatient varchar, --2||||4 ...
 				  outpatient varchar, --3||||4 ...
-				  cost money
+				  cost numeric
 				  -- various departments
 			        );
 INSERT INTO hospital_formulary  VALUES ( '1', '国药准字H13023234', '青霉素钠', 'Benzylpenicillin Sodium', 

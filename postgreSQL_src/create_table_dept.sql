@@ -17,7 +17,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE dept ( id smallint NOT NULL, 
+CREATE TABLE dept ( id smallint PRIMARY KEY, 
 	            name varchar NOT NULL, 
 		    description text 
 		  );

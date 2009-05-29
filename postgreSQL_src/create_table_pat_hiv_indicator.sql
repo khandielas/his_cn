@@ -18,7 +18,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE pat_hiv_indicator (code smallint NOT NULL, type varchar NOT NULL);
+CREATE TABLE pat_hiv_indicator (code smallint PRIMARY KEY, type varchar NOT NULL);
 INSERT INTO pat_hiv_indicator VALUES (0, '未查');
 INSERT INTO pat_hiv_indicator VALUES (1, '阴性');
 INSERT INTO pat_hiv_indicator VALUES (2, '阳性');

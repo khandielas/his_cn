@@ -18,7 +18,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE lang_code (code varchar NOT NULL, lang varchar NOT NULL);
+CREATE TABLE lang_code (code varchar PRIMARY KEY, lang varchar NOT NULL);
 
 INSERT INTO lang_code VALUES ( 'zh', '汉语' );
 INSERT INTO lang_code VALUES ( 'en', '英语' );

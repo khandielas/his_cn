@@ -18,7 +18,7 @@
 --     REVISION: 
 --===============================================================================
 
-CREATE TABLE zip_code (code varchar NOT NULL, area varchar NOT NULL);
+CREATE TABLE zip_code (code varchar PRIMARY KEY, area varchar NOT NULL);
 
 -- Probably no need to implement this table.
 

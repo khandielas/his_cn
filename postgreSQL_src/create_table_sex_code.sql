@@ -24,7 +24,7 @@
 --     REVISION: 
 --===============================================================================
 
-CREATE TABLE sex_code (code smallint NOT NULL, sex varchar NOT NULL);
+CREATE TABLE sex_code (code smallint PRIMARY KEY, sex varchar NOT NULL);
 INSERT INTO sex_code VALUES (0, '未知性别');
 INSERT INTO sex_code VALUES (1, '男');
 INSERT INTO sex_code VALUES (2, '女');

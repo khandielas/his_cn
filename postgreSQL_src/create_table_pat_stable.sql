@@ -26,24 +26,25 @@
 --     REVISION:
 --===============================================================================
 
-CREATE TABLE pat_stable ( file_no serial, 
-	                  id varchar, 
-			  id_type varchar, 
-			  sex varchar, 
-			  dob timestamp, 
-			  birth_place varchar,
-			  native varchar,
-			  nationality varchar,
-			  ethnic varchar,
-			  lang varchar,
-			  abo_type varchar,
-			  rh_type varchar,
-			  user_added smallint,
-			  date_added timestamp,
-			  user_modified smallint,
-			  date_modified timestamp,
-			  national_medical_no varchar
-			  -- Place holder, in case a national medical is available.
-		        );
+CREATE TABLE pat_stable 
+( file_no             serial     PRIMARY KEY, 
+  id                  varchar, 
+  id_type             varchar, 
+  sex                 varchar    REFERENCES sex_code (sex), 
+  dob                 timestamp, 
+  birth_place         varchar,
+  native              varchar, -- 籍贯
+  nationality         varchar    REFERENCES country_code (country_in_chinese),
+  ethnic              varchar    REFERENCES ethnic_code (ethnic),
+  lang                varchar    REFERENCES lang_code (lang),
+  abo_type            varchar    REFERENCES abo_blood_type (type),
+  rh_type             varchar    REFERENCES rh_blood_type (type),
+  user_added          smallint   REFERENCES personnel (id) ,
+  date_added          timestamp,
+  user_modified       smallint   REFERENCES personnel (id),
+  date_modified       timestamp,
+  national_medical_no varchar
+  -- Place holder, in case a national medical is available.
+);
 
 

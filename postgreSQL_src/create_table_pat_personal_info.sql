@@ -18,9 +18,9 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE pat_personal_info( seq serial,
-                                site smallint NOT NULL, 
-	                        kindex char(14) NOT NULL,
+CREATE TABLE pat_personal_info( id interger REFERENCES pat_stable (file_no),
+                                site smallint NOT NULL REFERENCES site (id), 
+	                        kindex char(14),
 		                name varchar NOT NULL,
 		                address text,
 		                zip_code varchar,
@@ -47,5 +47,5 @@ CREATE TABLE pat_personal_info( seq serial,
 				account_status boolean,
 				other_contract_no varchar,
 				other_contract_notes text,
-		                primary key (site, kindex) 
+		                PRIMARY KEY (site, kindex) 
 			      );

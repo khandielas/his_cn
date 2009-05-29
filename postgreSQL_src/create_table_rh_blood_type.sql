@@ -18,7 +18,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE rh_blood_type(code smallint NOT NULL , type varchar NOT NULL);
+CREATE TABLE rh_blood_type(code smallint PRIMARY KEY , type varchar NOT NULL);
 INSERT INTO rh_blood_type VALUES (1, 'RH 阳性');
 INSERT INTO rh_blood_type VALUES (2, 'RH 阴性');
 INSERT INTO rh_blood_type VALUES (9, 'RH 血型不详');

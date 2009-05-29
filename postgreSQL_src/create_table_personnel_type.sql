@@ -17,7 +17,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE personnel_type ( id smallint NOT NULL, 
+CREATE TABLE personnel_type ( id smallint PRIMARY KEY, 
 	                      type varchar NOT NULL, 
 		              description varchar 
 		            );

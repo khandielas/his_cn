@@ -21,7 +21,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE pat_id_type ( type smallint NOT NULL, 
+CREATE TABLE pat_id_type ( type smallint PRIMARY KEY, 
 	                   id_name varchar NOT NULL, 
 			   description varchar
 		         );

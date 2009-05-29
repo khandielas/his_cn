@@ -30,7 +30,7 @@
 --     REVISION: 
 --===============================================================================
 
-CREATE TABLE site ( id smallint NOT NULL, 
+CREATE TABLE site ( id smallint PRIMARY KEY, 
 	            name varchar NOT NULL, 
 		    status boolean, 
 		    address varchar, 

@@ -19,7 +19,7 @@
 --     REVISION: 
 --===============================================================================
 
-CREATE TABLE country_code ( code varchar NOT NULL, 
+CREATE TABLE country_code ( code varchar PRIMARY KEY, 
 	                    abbr_2letter char(2), 
 			    abbr_3letter(3), 
 			    country varchar NOT NULL,

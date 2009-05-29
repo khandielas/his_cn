@@ -19,6 +19,6 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE order_type ( code varchar NOT NULL, order varchar NOT NULL);
+CREATE TABLE order_type ( code varchar PRIMARY KEY, order varchar NOT NULL);
 INSERT INTO  order_type VALUES( 'lab', 'Laboratory');
 INSERT INTO  order_type VALUES( 'rad', 'Radiology');

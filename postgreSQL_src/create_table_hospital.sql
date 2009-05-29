@@ -29,7 +29,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE hospital ( id char(9) NOT NULL, 
+CREATE TABLE hospital ( id char(9) PRIMARY KEY, 
 	                name varchar NOT NULL, 
 			address varchar, 
 			zip_code varchar, 

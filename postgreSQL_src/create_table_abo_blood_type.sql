@@ -20,7 +20,7 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE abo_blood_type (code smallint NOT NULL, type varchar NOT NULL);
+CREATE TABLE abo_blood_type (code smallint PRIMARY KEY, type varchar NOT NULL);
 INSERT INTO  abo_blood_type VALUES( 1, 'A');
 INSERT INTO  abo_blood_type VALUES( 2, 'B');
 INSERT INTO  abo_blood_type VALUES( 3, 'O');

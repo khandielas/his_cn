@@ -17,32 +17,33 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE personnel ( site smallint NOT NULL,
-	                 id smallint NOT NULL, 
-			 type varchar NOT NULL,
-			 status boolean,
-			 username varchar NOT NULL,
-			 password varchar NOT NULL,
-			 password_date timestamp, -- the last time to change password
-			 added_usr smallint,
-			 added_date timestamp,
-			 modify_usr smallint,
-			 modify_date timestamp,
-			 dept varchar,
-			 default_dept_view varchar,
-			 name varchar NOT NULL,
-			 address varchar,
-			 work_phone varchar,
-			 home_phone varchar,
-			 mobile varchar,
-			 fax varchar,
-			 email varchar,
-			 license_num varchar,
-			 license_type varchar,
-			 kindex varchar(14), -- current patient
-			 last_url varchar,   -- last visit url
-			 default_url varchar,-- default url to visit
-			 ip varchar,         -- usr can be limited for internal use
-			 timeout varchar,    
-			 last_login timestamp
-		       );
+CREATE TABLE personnel 
+( site              smallint NOT NULL REFERENCES site (id),
+  id                smallint PRIMARY KEY, 
+  type              varchar NOT NULL, -- multiple types are allowed
+  status            boolean,
+  username          varchar NOT NULL,
+  password          varchar NOT NULL,
+  password_date     timestamp, -- the last time to change password
+  added_usr         smallint,
+  added_date        timestamp,
+  modify_usr        smallint,
+  modify_date       timestamp,
+  dept              varchar,
+  default_dept_view varchar,
+  name              varchar NOT NULL,
+  address           varchar,
+  work_phone        varchar,
+  home_phone        varchar,
+  mobile            varchar,
+  fax               varchar,
+  email             varchar,
+  license_num       varchar,
+  license_type      varchar,
+  kindex            char(14), -- current patient
+  last_url          varchar,   -- last visit url
+  default_url       varchar,-- default url to visit
+  ip                varchar,         -- usr can be limited for internal use
+  timeout           varchar,    
+  last_login        timestamp
+);

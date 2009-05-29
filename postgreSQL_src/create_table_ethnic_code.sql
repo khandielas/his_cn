@@ -19,7 +19,7 @@
 --===============================================================================
 
 
-CREATE TABLE ethnic_code ( code varchar NOT NULL, 
+CREATE TABLE ethnic_code ( code varchar PRIMARY KEY, 
 	                   ethnic varchar NOT NULL, 
 			   abbr varchar NOT NULL
 		         );

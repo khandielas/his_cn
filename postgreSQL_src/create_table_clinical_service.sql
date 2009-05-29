@@ -18,12 +18,13 @@
 --     REVISION: 
 --===============================================================================
 
-CREATE TABLE clinical_service ( seq smallint NOT NULL,
-	                        code varchar,
+CREATE TABLE clinical_service ( id integer PRIMARY KEY,
+	                        code varchar, 
+				-- code can be defined with class/category ...
 	                        abbr_name varchar,
 				chinese_name varchar,
 				category varchar,
 				description text,
-				cost money
+				cost NUMERIC
 			      );
-INSERT INTO clinical_service VALUES ( 1, 'triage', 'triage', '初诊', '', '医生或者授权护士可以对病人作初诊', '1.50' );
+INSERT INTO clinical_service VALUES ( 1, 'triage', 'triage', '初诊', '', '医生或者授权护士可以对病人作初诊', '1.506' );

@@ -19,20 +19,22 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE pat_clinical_flowchart( site smallint NOT NULL, 
-	                             kindex char(14) NOT NULL,
-                                     complaint varchar,
-				     pat_comment varchar,
-				     vs_added smallint,
-				     vs_added_time timestamp,
-				     systolic varchar,
-				     diastolic varchar,
-				     temp varchar,
-				     pulse varchar,
-				     resp varchar,
-				     O2 varchar,
-				     pain smallint,
-				     diagnosis varchar,
-				     clinical_comment varchar,
-				     disgnosis_time timestamp
-				   );
+CREATE TABLE pat_clinical_flowchart
+( site             smallint NOT NULL REFERENCES site (id), 
+  kindex           char(14) NOT NULL REFERENCES pat_personal_info (kindex),
+  id               serial PRIMARY KEY,
+  complaint        varchar,
+  pat_comment      varchar,
+  vs_added         smallint,
+  vs_added_time    timestamp,
+  systolic         varchar,
+  diastolic        varchar,
+  temp             varchar,
+  pulse            varchar,
+  resp             varchar,
+  O2               varchar,
+  pain             smallint,
+  diagnosis        varchar,
+  clinical_comment varchar,
+  disgnosis_time   timestamp default CURRENT_TIMESTAMP
+);

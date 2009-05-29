@@ -18,37 +18,38 @@
 --     REVISION:  
 --===============================================================================
 
-CREATE TABLE pat_prescription ( site smallint NOT NULL, 
-	                        kindex char(14) NOT NULL,
-			        id serial,
-			        status boolean,
-			        -- for drug in database
-			        name varchar, -- drug name
-			        unit_entered varchar,
-			        route_entered varchar,
-			        schedule_entered varchar,
-			        dose_entered varchar,
-			        notes varchar,
-			        -- for reconciliation
-			        reconciliation varchar,
-			        recon_notes text,
-			        -- execution flow
-			        date timestamp,
-			        usr smallint,
-			        for_usr smallint,
-			        delete_date timestamp,
-			        delete_usr smallint,
-			        -- About drug (from database)
-			        barcode varchar,
-			        brand_name varchar,
-			        active_name varchar,
-			        active_id varchar,
-			        drug_id varchar,
-			        drug_route varchar,
-			        drug_form varchar,
-			        drug_strength varchar,
-			        drug_dose varchar,
-			        pachaging_id varchar, -- 国药准字....
-			        drug_cat_id varchar
-			        drug_unit varchar,
-			      };
+CREATE TABLE pat_prescription 
+( site             smallint NOT NULL REFERENCES site (id), 
+  kindex           char(14) NOT NULL REFERENCES pat_personal_info (kindex),
+  id               serial PRIMARY KEY,
+  status           boolean,
+  -- for drug in database
+  name             varchar, -- drug name
+  unit_entered     varchar,
+  route_entered    varchar,
+  schedule_entered varchar,
+  dose_entered     varchar,
+  notes            varchar,
+  -- for reconciliation
+  reconciliation   varchar,
+  recon_notes      text,
+  -- execution flow
+  date             timestamp,
+  usr              smallint  REFERENCES personnel (id),
+  for_usr          smallint  REFERENCES personnel (id),
+  delete_date      timestamp,
+  delete_usr       smallint  REFERENCES personnel (id),
+  -- About drug (from database)
+  barcode          varchar,
+  brand_name       varchar,
+  active_name      varchar,
+  active_id        varchar,
+  drug_id          varchar,
+  drug_route       varchar,
+  drug_form        varchar,
+  drug_strength    varchar,
+  drug_dose        varchar,
+  pachaging_id     varchar, -- 国药准字....
+  drug_cat_id      varchar,
+  drug_unit        varchar
+};
